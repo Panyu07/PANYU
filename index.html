@@ -1,29 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang = "ko">
     <head>
-        <meta charset="UTF-8">
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device - width, initial - scale - 1.0">
+        <title> 개인 포트폴리오</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body
+            {
+                margin: 0;
+                padding: 30px;
+                font-family: Arial, "Malgun Gothic", sans-serif;
+                color: #222;
+                background-color: #ffffff;
+            }
+
+            /* 전체 페이지 */
+            .container
+            {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            /* 상단 제목 */
+            header
+            {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #eeeeee;
+            }
+
+            header h1
+            {
+                margin: 0;
+                font-size: 28px;
+            }
+
+            header a,
+            footer a
+            {
+                color: #0969da;
+                text-decoration: none;
+            }
+
+            /* 각 영역 */
+            section
+            {
+                margin-top: 30px;
+            }
+
+            h2
+            {
+                margin-bottom: 15px;
+                font-size:22px;
+            }
+
+            /* 소개 */
+            .introduction
+            {
+                padding: 20px;
+                background-color: #f5f5f5;
+                border-radius: 8px;
+                line-height: 1.8;
+            }
+
+            .introduction p
+            {
+                margin: 5px 0;
+            }
+
+            /* 실적 표 */
+            table
+            {
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+            }
+
+            th
+            {
+                padding: 12px;
+                background-color: #ffbd00;
+                color: #222;
+            }
+
+            td
+            {
+                padding: 12px;
+                border-bottom: 1px solid #dddddd;
+            }
+
+            tbody tr:nth-child(even)
+            {
+                background-color: #f5f5f5;
+            }
+
+            /* 하단 */
+            footer
+            {
+                margin-top: 35px;
+                padding-top: 15px;
+                border-top: 1px solid #dddddd;
+                text-align: center;
+                font-size: 14px;
+            }
+
+            @media (max-width: 600px)
+            {
+                body
+                {
+                    padding: 15px;
+                }
+
+                header
+                {
+                    align-items: flex-start;
+                    gap: 10px;
+                    flex-direction: column;
+                }
+
+                table
+                {
+                    font-size: 13px;
+                }
+
+                th, td
+                {
+                    padding: 8px 4px;
+                }
+            }
+        </style>
     </head>
+
     <body>
-        <h2>과목별 참고도서 목록</h2>
-        <ul>
-            <li>IT 기술의 이해</li>
-            <ol>
-                <li>컴퓨터와 IT기술의 이해</li>
-                <li>Understanding Computers 115th Ed.</li>
-                <li>Discovering Computers</li>
-            </ol>
-            <li>웹프로그래밍</li>
-            <ol>
-                <li>HTML5 웹프로그래밍 입문</li>
-                <li>소셜미디어 시대의 인터넷 이해</li>
-                <li> What Is HTML5?</li>
-            </ol>
-        </ul>
-        <h2>지정도서</h2>
-        <dl>
-            <dt>지정도서 서비스란?</dt>
-            <dd>수업에 필요한 주교재 및 참고문헌 등의 필수도서를 도서관 1층 대출..
-                별도로 비치하여 관리하는 제도</dd>
-        </dl>
+        <div class = "container">
+
+            <!-- F-01 소개-->
+             <header>
+                <h1>Panyu07</h1>
+                <a href = "https://github.com/Panyu07" target = "_blank" rel = "noopener noreferrer"> GitHub 프로필</a>
+             </header>
+
+             <main>
+                <section id = "introduction">
+                    <h2>소개</h2>
+
+                    <div class = "introduction">
+                        <p><strong>소속:</strong> 상명대학교 소프트웨어학과 1학년</p>
+                        <p><strong>관심 분야:</strong> 웹 개발과 인공지능에 관심이 있습니다.</p>
+                    </div>
+                </section>
+
+                <!--F-03 실적 목록 -->
+                <section id = "achievements">
+                    <h2>실적 목록</h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>시기</th>
+                                <th>분류</th>
+                                <th>내용</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr> 
+                                <td>2026.10</td>
+                                <td>프로젝트</td>
+                                <td>개인 포트폴리오 웹페이지 제작</td>
+                            </tr>
+
+                            <tr>
+                                <td>2026.09</td>
+                                <td>교육</td>
+                                <td>HTML 및 CSS 기초 학습</td>
+                            </tr>
+
+                            <tr>
+                                <td>2025.12</td>
+                                <td>활동</td>
+                                <td>관심 분야 관련 학습 활동</td>
+                            </tr>
+
+                            <tr>
+                                <td>2025.07</td>
+                                <td>수상</td>
+                                <td>고등학교 시절 실제 수상 실적 입력</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+             </main>
+
+             <!-- F-02 연락 채널: GitHub 링크는 페이지 전체에 하나만 사용 -->
+              <footer>
+                <a href = "https://github.com/Panyu07" target = "_blank" rel = "noopener noreferrer">
+                    GitHub 프로필 바로가기
+                </a>
+              </footer>
+
+        </div>
     </body>
 </html>
